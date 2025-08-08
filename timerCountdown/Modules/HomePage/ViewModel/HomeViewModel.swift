@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-class TimerCountdownViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     
 }

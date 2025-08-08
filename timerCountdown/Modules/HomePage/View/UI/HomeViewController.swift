@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TimerCountdownViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
