@@ -13,7 +13,7 @@ class CountdownViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
     
-    init() {
-        let timer = Timer.publish(every: 1, on: .main, in: .init(seconds: 0, nanoseconds: 0))
-    }
+//    init() {
+//        let timer = Timer.publish(every: 1, on: .main, in: .init(seconds: 0, nanoseconds: 0))
+//    }
 }

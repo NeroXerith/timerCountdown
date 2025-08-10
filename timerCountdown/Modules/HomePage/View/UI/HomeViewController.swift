@@ -11,9 +11,16 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationItem.backButtonTitle = "Home"
     }
 
-
+    @IBAction func proceedButtonTapped(_ sender: Any) {
+        debugPrint("proceedButtonTapped!")
+        
+        let vc = CountdownViewController(nibName: "CountdownViewController", bundle: nil)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
