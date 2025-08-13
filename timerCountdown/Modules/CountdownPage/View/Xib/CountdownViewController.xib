@@ -17,9 +17,38 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-hp-bBR">
+                    <rect key="frame" x="133" y="381" width="126" height="34.333333333333314"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Proceed"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcj-Wz-VlL">
+                    <rect key="frame" x="54" y="272" width="48.666666666666657" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need to wait a certain time for the button to be clickable!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-AV-Lei">
+                    <rect key="frame" x="54" y="300.33333333333331" width="281" height="40.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="39" y="21"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gcB-hp-bBR" secondAttribute="trailing" constant="134" id="NLr-O4-m5f"/>
+                <constraint firstItem="kcj-Wz-VlL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="154" id="Ydm-SH-5gT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jkb-AV-Lei" secondAttribute="trailing" constant="58" id="a3w-2x-5kw"/>
+                <constraint firstItem="gcB-hp-bBR" firstAttribute="top" secondItem="jkb-AV-Lei" secondAttribute="bottom" constant="40" id="dOU-RW-u1t"/>
+                <constraint firstItem="kcj-Wz-VlL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="i3R-Xf-lmF"/>
+                <constraint firstItem="jkb-AV-Lei" firstAttribute="top" secondItem="kcj-Wz-VlL" secondAttribute="bottom" constant="7.9999999999999432" id="oMg-ep-Exl"/>
+                <constraint firstItem="gcB-hp-bBR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="133" id="oPV-uk-HZb"/>
+                <constraint firstItem="jkb-AV-Lei" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="zgA-mb-ryY"/>
+            </constraints>
+            <point key="canvasLocation" x="38.931297709923662" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
