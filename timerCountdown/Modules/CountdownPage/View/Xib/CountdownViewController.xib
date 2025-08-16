@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountdownViewController" customModule="timerCountdown" customModuleProvider="target">
             <connections>
+                <outlet property="proceedButton" destination="gcB-hp-bBR" id="2OU-dw-75b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,6 +23,9 @@
                     <rect key="frame" x="133" y="381" width="126" height="34.333333333333314"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Proceed"/>
+                    <connections>
+                        <action selector="proceedButtonTapped:" destination="-1" eventType="touchUpInside" id="cAh-ci-uTl"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcj-Wz-VlL">
                     <rect key="frame" x="54" y="272" width="48.666666666666657" height="20.333333333333314"/>

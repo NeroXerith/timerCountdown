@@ -19,7 +19,7 @@ class CountdownViewModel: ObservableObject {
     @Published var timeRemainingText: String = ""
     @Published var isButtonEabled: Bool = false
     @Published var showValidationSuccess: Bool = false
-    @Published var showValidationFailure: Bool = false
+    @Published var showValidationError: Bool = false
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -37,7 +37,7 @@ class CountdownViewModel: ObservableObject {
     
     func startCountdown(from millis: Int){
         durationInMilliSeconds = millis
-        isButtonEabled = millis <= 0 ? false : true
+        isButtonEabled = millis <= 0
         
         timer = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
@@ -47,7 +47,6 @@ class CountdownViewModel: ObservableObject {
                 
                 if self.durationInMilliSeconds <= 0 {
                     isButtonEabled = true
-                    self.timeRemainingText = "You may proceed"
                     self.invalidateTimer()
                 } else {
                     self.timeRemainingText = self.formatDuration(self.durationInMilliSeconds)
@@ -78,12 +77,13 @@ class CountdownViewModel: ObservableObject {
                 case .finished:
                     break
                 case .failure:
-                    self?.showValidationFailure = true
+                    self?.showValidationError = true
                 }
             }, receiveValue: {[weak self] success in
                 self?.showValidationSuccess = true })
             .store(in: &cancellables)
     }
+    
     deinit {
         invalidateTimer()
     }
