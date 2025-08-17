@@ -17,9 +17,33 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome! You have succesfully check-in. You may now proceed to the lune." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLa-6w-83T">
+                    <rect key="frame" x="42" y="181" width="304" height="40.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkQ-Ew-xj9">
+                    <rect key="frame" x="148" y="264" width="93" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="To Home"/>
+                    <connections>
+                        <action selector="homeButtonTapped:" destination="-1" eventType="touchUpInside" id="nNK-Ln-fRB"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="6" y="21"/>
+            <constraints>
+                <constraint firstItem="LLa-6w-83T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="Jf0-pD-xRR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WkQ-Ew-xj9" secondAttribute="trailing" constant="152" id="U5V-T3-cBa"/>
+                <constraint firstItem="WkQ-Ew-xj9" firstAttribute="top" secondItem="LLa-6w-83T" secondAttribute="bottom" constant="42.333333333333343" id="Urs-3B-Jwb"/>
+                <constraint firstItem="LLa-6w-83T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="63" id="ZrK-CF-1xT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LLa-6w-83T" secondAttribute="trailing" constant="47" id="q3M-W7-tiG"/>
+                <constraint firstItem="WkQ-Ew-xj9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="148" id="tmx-9O-jRy"/>
+            </constraints>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
